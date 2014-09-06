@@ -1,0 +1,13 @@
+{
+	"id": "com.rays.loading",
+	"name": "com.rays.loading",
+	"description" : "A simple loading widget that uses titanium's Activity Indicator.",
+	"author": "Ray Saavedra",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2014",
+	"license":"Apache License, Version 2.0",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"2.1",
+	"tags":"",
+	"platforms":"android,ios"
+}

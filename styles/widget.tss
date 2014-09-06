@@ -1,0 +1,38 @@
+"#disableScreenOverlayView": {
+	visible: "false",
+	backgroundColor: '#C000',
+	top: "0dp",
+	bottom: "0dp",
+}
+
+"#loadingOverlayView": {
+	width: "100%",
+	height: "26%",
+	visible: false,
+	backgroundColor: "transparent",
+	layout: "vertical",
+	zIndex: 99,
+}
+
+"#loadingIndicator[platform=android]": {
+	top: '10%',
+	style: Ti.UI.ActivityIndicatorStyle.BIG,
+	zIndex: 99,
+}
+
+"#loadingIndicator[platform=ios]": {
+	top: '20%',
+	style: Ti.UI.iPhone.ActivityIndicatorStyle.BIG,
+	zIndex: 99,
+}
+
+"#loadingMessageLabel": {
+	font: {
+		fontSize: "18dp"
+	},
+	top: "10%",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	color: "#fff",
+	
+	text: L('loadingMessage', 'Loading... Please Wait'),
+}

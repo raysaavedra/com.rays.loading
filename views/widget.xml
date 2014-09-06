@@ -1,0 +1,8 @@
+<Alloy>
+	<View id="disableScreenOverlayView"/>
+	
+	<View id="loadingOverlayView">
+		<ActivityIndicator id="loadingIndicator" />
+		<Label id="loadingMessageLabel" />
+	</View>
+</Alloy>
