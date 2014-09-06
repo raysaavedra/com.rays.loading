@@ -1,15 +1,5 @@
 #com.rays.loading
-##Description
 A simple loading widget that uses titanium's Activity Indicator.
-
-##Screenshot
-iOS Sample
-
-![iOS Loading Sample](https://raw.githubusercontent.com/raysaavedra/com.rays.loading/master/docs/ios.png)
-
-Android Sample
-
-![Android Loading Sample](https://raw.githubusercontent.com/raysaavedra/com.rays.loading/master/docs/android.png)
 
 ##How to use the widget
 * Download com.rays.loading
@@ -54,6 +44,15 @@ Android Sample
   ```javascript
       Alloy.Globals.loading.start("Your Message");
   ```
+
+##Screenshot
+iOS Sample
+
+![iOS Loading Sample](https://raw.githubusercontent.com/raysaavedra/com.rays.loading/master/docs/ios.png)
+
+Android Sample
+
+![Android Loading Sample](https://raw.githubusercontent.com/raysaavedra/com.rays.loading/master/docs/android.png)
 
 
 ##License
