@@ -25,18 +25,34 @@ $.init = function(currentWindow) {
 
 };
 
-$.startLoading = function(loadingMessage) {
-	if (_initCompleted) {
-		var _loadingMessage = loadingMessage || L('loadingMessage', 'Loading... Please Wait');
+$.startLoading = function(message, options) {
+    if (!_initCompleted) {
+        Ti.API.error('com.rays.loading: Loading init not found');
+        return;
+    }
+    
+    message = message || L('loadingMessage', 'Loading... Please Wait');
+    options = _.extend({
+        showOverlay: true,
+        showMessage: true
+    }, options);
+    
+    if (options.showMessage) {
+        $.loadingMessageLabel.show();
+        $.loadingMessageLabel.setHeight(Ti.UI.SIZE);
+        $.loadingMessageLabel.setText(message);
+    }
+    else {
+        $.loadingMessageLabel.hide();
+        $.loadingMessageLabel.setHeight(0);
+        $.loadingMessageLabel.setText('');
+    }
 
-		$.loadingMessageLabel.setText(_loadingMessage);
-		
-		$.disableScreenOverlayView.show();
-	    $.loadingOverlayView.show();
-	    $.loadingIndicator.show();	
-	}
-	else
-		Ti.API.error("com.rays.loading: Loading init not found");
+    $.loadingIndicator.show();
+    $.loadingOverlayView.show();
+        
+    $.disableScreenOverlayView.setBackgroundColor(options.showOverlay ? '#cc000000' : 'transparent');
+    $.disableScreenOverlayView.show();
 };
 
 $.stopLoading = function() {
